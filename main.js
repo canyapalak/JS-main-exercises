@@ -504,3 +504,20 @@ function removeDublicates(arr) {
 }
 
 console.log(removeDublicates([11, 4, 9, 4, 15, 11, 7]));
+
+// exercise 33
+// sort numbers in an array from min to max
+console.log("-----exercise 33------");
+
+function sortMinToMax(nums) {
+  nums.sort(function (a, b) {
+    return a - b;
+  });
+  return nums;
+}
+
+console.log(sortMinToMax([3, 28, 2, 5, 11]));
+
+// exercise 34
+// find the median in an array of numbers
+console.log("-----exercise 34------");
