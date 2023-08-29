@@ -433,3 +433,74 @@ console.log(capitalizeFirstLetter("apple"));
 // exercise 27
 // check if a number is even or odd
 console.log("-----exercise 27------");
+
+function checkEvenOrOdd(num) {
+  if (num % 2 === 0) {
+    return "Even";
+  } else {
+    return "Odd";
+  }
+}
+
+console.log(checkEvenOrOdd(17));
+
+// exercise 28
+// get a random number between two numbers
+console.log("-----exercise 28------");
+
+function generateRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+console.log(generateRandomNumber(1, 12));
+
+// exercise 29
+// reverse a string
+console.log("-----exercise 29------");
+
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+
+console.log(reverseString("berlin"));
+
+// exercise 30
+// check if a string is plaindrome
+console.log("-----exercise 30------");
+
+function isPlaindrome(str) {
+  let reverse = str.split("").reverse().join("");
+  if (reverse === str) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(isPlaindrome("level"));
+
+// exercise 31
+// find the biggest number in an array of numbers
+console.log("-----exercise 31------");
+
+function findBiggestNumber(arr) {
+  let max = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+  return max;
+}
+
+console.log(findBiggestNumber([4, 19, 20, 22, 1, 17, 5]));
+
+// exercise 32
+// remove dublicates in an array of numbers
+console.log("-----exercise 32------");
+
+function removeDublicates(arr) {
+  return Array.from(new Set(arr));
+}
+
+console.log(removeDublicates([11, 4, 9, 4, 15, 11, 7]));
