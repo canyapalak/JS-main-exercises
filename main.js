@@ -387,11 +387,49 @@ console.log(sortArray(["orange", "apple", "kiwi", "banana"]));
 // split a word into letters and sort alphabetically
 console.log("-----exercise 23------");
 
-function sortString(str) {
-  let string = str.split("");
+function sortString(arr) {
+  let string = arr.split("");
   string = string.sort();
 
   return string;
 }
 
 console.log(sortString("orange"));
+
+//exercise 24
+// show a key of an object
+console.log("-----exercise 24------");
+
+function showKey(obj, key) {
+  return obj[key];
+}
+
+console.log(showKey({ name: "Can", city: "Berlin" }, "city"));
+
+// exercise 25
+// calculate the sum of an array of numbers
+console.log("-----exercise 25------");
+
+function calculateSum(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+
+  return sum;
+}
+console.log(calculateSum([2, 6, 11, 100]));
+
+// exercise 26
+// capitalize first letter of a string
+console.log("-----exercise 26------");
+
+function capitalizeFirstLetter(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+console.log(capitalizeFirstLetter("apple"));
+
+// exercise 27
+// check if a number is even or odd
+console.log("-----exercise 27------");
