@@ -541,3 +541,22 @@ function findMedian(arr) {
 }
 
 console.log(findMedian([1, 4, 7, 8, 24, 99]));
+
+// exercise 35
+// find unique elements in an array
+console.log("-----exercise 35------");
+
+function findUniqueElement(arr) {
+  let uniqueElements = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    let currentNumber = arr[i];
+
+    if (arr.indexOf(currentNumber) === arr.lastIndexOf(currentNumber)) {
+      uniqueElements.push(currentNumber);
+    }
+  }
+
+  return uniqueElements;
+}
+console.log(findUniqueElement([1, 1, 2, 2, 3, 4, 4, 5]));
