@@ -521,3 +521,23 @@ console.log(sortMinToMax([3, 28, 2, 5, 11]));
 // exercise 34
 // find the median in an array of numbers
 console.log("-----exercise 34------");
+
+function findMedian(arr) {
+  let arrSum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    arrSum += arr[i];
+  }
+  let decimalMedian = arrSum / arr.length;
+
+  let closestValue = 0;
+  for (let i = 1; i < arr.length; i++) {
+    if (
+      Math.abs(arr[i] - decimalMedian) < Math.abs(closestValue - decimalMedian)
+    ) {
+      closestValue = arr[i];
+    }
+  }
+  return closestValue;
+}
+
+console.log(findMedian([1, 4, 7, 8, 24, 99]));
