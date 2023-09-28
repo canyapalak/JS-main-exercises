@@ -560,3 +560,36 @@ function findUniqueElement(arr) {
   return uniqueElements;
 }
 console.log(findUniqueElement([1, 1, 2, 2, 3, 4, 4, 5]));
+
+// exercise 36
+// find the ratios of an array's elements that are positive, negative, and zero, with max 3 digits after the decimal.
+console.log("-----exercise 36------");
+
+function plusMinus(arr) {
+  let positiveCount = 0;
+  let negativeCount = 0;
+  let zeroCount = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      positiveCount++;
+    } else if (arr[i] < 0) {
+      negativeCount++;
+    } else {
+      zeroCount++;
+    }
+  }
+
+  const total = arr.length;
+  const ratioPositive = positiveCount / total;
+  const ratioNegative = negativeCount / total;
+  const ratioZero = zeroCount / total;
+
+  console.log("positive:", ratioPositive.toFixed(3));
+  console.log("negative:", ratioNegative.toFixed(3));
+  console.log("zero:", ratioZero.toFixed(3));
+}
+
+const arrNumber = [-1, 2, -3, 0, 1, 3, 5];
+
+plusMinus(arrNumber);
